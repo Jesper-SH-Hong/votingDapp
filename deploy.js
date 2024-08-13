@@ -14,6 +14,8 @@ abi = fs.readFileSync("./VotingABI.json").toString();
 abi = JSON.parse(abi);
 
 const contract = new web3.eth.Contract(abi);
+
+//To see the inputs of the contract
 console.log(contract._jsonInterface.map((i) => i.inputs));
 
 const deployContract = async () => {
